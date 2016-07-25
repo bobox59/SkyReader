@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35D02FDF1D45E86D00707D9C /* toynames.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35D02FDE1D45E86D00707D9C /* toynames.cpp */; };
 		449FBBAD16AE783F0045855B /* checksum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 449FBB9C16AE783F0045855B /* checksum.cpp */; };
 		449FBBAE16AE783F0045855B /* crypt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 449FBB9E16AE783F0045855B /* crypt.cpp */; };
 		449FBBAF16AE783F0045855B /* fileio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 449FBBA016AE783F0045855B /* fileio.cpp */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		35D02FDE1D45E86D00707D9C /* toynames.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = toynames.cpp; sourceTree = "<group>"; };
 		449FBB9616AE78120045855B /* editor */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = editor; sourceTree = BUILT_PRODUCTS_DIR; };
 		449FBB9C16AE783F0045855B /* checksum.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = checksum.cpp; sourceTree = "<group>"; };
 		449FBB9D16AE783F0045855B /* checksum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = checksum.h; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 		449FBB8616AE77E10045855B = {
 			isa = PBXGroup;
 			children = (
+				35D02FDE1D45E86D00707D9C /* toynames.cpp */,
 				449FBB9C16AE783F0045855B /* checksum.cpp */,
 				449FBB9D16AE783F0045855B /* checksum.h */,
 				449FBB9E16AE783F0045855B /* crypt.cpp */,
@@ -114,8 +117,11 @@
 /* Begin PBXProject section */
 		449FBB8816AE77E10045855B /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+			};
 			buildConfigurationList = 449FBB8B16AE77E10045855B /* Build configuration list for PBXProject "SkyReader" */;
-			compatibilityVersion = "Xcode 3.1";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -142,6 +148,7 @@
 				449FBBAD16AE783F0045855B /* checksum.cpp in Sources */,
 				449FBBAE16AE783F0045855B /* crypt.cpp in Sources */,
 				449FBBAF16AE783F0045855B /* fileio.cpp in Sources */,
+				35D02FDF1D45E86D00707D9C /* toynames.cpp in Sources */,
 				449FBBB016AE783F0045855B /* hid.c in Sources */,
 				449FBBB116AE783F0045855B /* main.cpp in Sources */,
 				449FBBB216AE783F0045855B /* md5.cpp in Sources */,
@@ -158,6 +165,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Debug;
 		};
