@@ -24,6 +24,7 @@ public:
     void initWithEncryptedFile(char *) throw (int);
     void initWithPortal(int) throw (int);
     
+    unsigned int CryptScheme(unsigned int);
     void listSkylanders();
     
     Skylander * getSkylander() { return sky; }

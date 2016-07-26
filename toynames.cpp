@@ -11,7 +11,11 @@
 const char * Skylander::toyName(unsigned short toyID) {
     
     switch (toyID) {
+
             
+            
+            
+            //Code for toynames.cpp
         case 0 : return "Whirlwind  /  Element:air  /  Group:regular";                      //0000|0030|regular|air
         case 1 : return "Sonic Boom  /  Element:air  /  Group:regular";                     //0100|0030|regular|air
         case 2 : return "Warnado  /  Element:air  /  Group:regular";                        //0200|0030|regular|air
@@ -71,22 +75,21 @@ const char * Skylander::toyName(unsigned short toyID) {
         case 207 : return "Sparx Dragonfly  /  Element:none  /  Group:item";              //cf00|0030|item|none
         case 208 : return "Dragonfire Cannon  /  Element:none  /  Group:item";            //d000|0030|item|none
         case 209 : return "Scorpion Striker Catapult  /  Element:none  /  Group:item";    //d100|0030|item|none
-        case 210 : return "Trap MAGIC - Biters Bane";                  //d200|0230|trap|magic
-        case 211 : return "Trap WATER - Tidal Tiki";                   //d300|0130|trap|water
-        case 212 : return "Trap AIR - Breezy Bird";                  //d400|0330|trap|air
-        case 213 : return "Trap UNDEAD - Spirit Sphere";                //d500|0430|trap|undead
-        case 214 : return "Trap TECH - Tech Totem";                   //d600|0030|trap|tech
-        case 215 : return "Trap FIRE - Eternal Flame";                //d700|0530|trap|fire
-        case 216 : return "Trap EARTH - Banded Boulder";               //d800|0030|trap|earth
-        case 217 : return "Trap LIFE - Oak Eagle";                    //d900|0330|trap|life
-        case 218 : return "Trap DARK - Dark Dagger";                  //da00|0030|trap|dark
-        case 220 : return "Trap KAOS - Kaos Trap!";                   //dc00|3030|trap|kaos
-            
+        case 210 : return "Biters Bane";                  //d200|0230|trap|magic
+        case 211 : return "Tidal Tiki";                   //d300|0130|trap|water
+        case 212 : return "Breezy Bird";                  //d400|0330|trap|air
+        case 213 : return "Spirit Sphere";                //d500|0430|trap|undead
+        case 214 : return "Tech Totem";                   //d600|0030|trap|tech
+        case 215 : return "Eternal Flame";                //d700|0530|trap|fire
+        case 216 : return "Banded Boulder";               //d800|0030|trap|earth
+        case 217 : return "Oak Eagle";                    //d900|0330|trap|life
+        case 218 : return "Dark Dagger";                  //da00|0030|trap|dark
+        case 219 : return "Heavenly Hawk";                //db00|0f30|trap|light
+        case 220 : return "Kaos Trap!";                   //dc00|3030|trap|kaos
         case 230 : return "Hand Of Fate  /  Element:none  /  Group:item";                 //e600|0030|item|none
         case 231 : return "Piggy Bank  /  Element:none  /  Group:item";                   //e700|0030|item|none
         case 232 : return "Rocket Ram  /  Element:none  /  Group:item";                   //e800|0030|item|none
         case 233 : return "Tiki Speaky  /  Element:none  /  Group:item";                  //e900|0030|item|none
-            
         case 300 : return "Dragons Peak  /  Element:none  /  Group:location";                 //2c01|0030|location|none
         case 301 : return "Empire of Ice  /  Element:none  /  Group:location";                //2d01|0030|location|none
         case 302 : return "Pirate Seas  /  Element:none  /  Group:location";                  //2e01|0030|location|none
@@ -96,7 +99,6 @@ const char * Skylander::toyName(unsigned short toyID) {
         case 306 : return "Nightmare Express  /  Element:none  /  Group:location";            //3201|0030|location|none
         case 307 : return "Sunscraper Spire  /  Element:light  /  Group:location";             //3301|0030|location|light
         case 308 : return "Midnight Museum  /  Element:dark  /  Group:location";              //3401|0030|location|dark
-            
         case 404 : return "Bash  /  Element:earth  /  Group:legendary";                         //9401|0030|legendary|earth
         case 416 : return "Spyro  /  Element:magic  /  Group:legendary";                        //a001|0030|legendary|magic
         case 419 : return "Trigger Happy  /  Element:tech  /  Group:legendary";                //a301|0030|legendary|tech
@@ -173,8 +175,15 @@ const char * Skylander::toyName(unsigned short toyID) {
         case 3013 : return "Grim Creeper  /  Element:undead  /  Group:regular";                //c50b|0030|regular|undead
         case 3014 : return "Rip Tide  /  Element:water  /  Group:regular";                    //c60b|0030|regular|water
         case 3015 : return "Punk Shock  /  Element:water  /  Group:regular";                  //c70b|0030|regular|water
+        case 3228 : return "Stealth Stinger";             //9C0C||sky|life
+        case 3423 : return "Turbo Charge Donkey Kong";    //5F0D||supercharger|life
+        case 3424 : return "Bowser";    //5F0D||supercharger|life
             
-            //Default fallback option with toyID
+            
+            
+            
+            
+        //Default fallback option with toyID
         default		:
             char* toyName = new char[25];
             sprintf(toyName, "zzUNKNOWN_%hu", toyID);

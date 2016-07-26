@@ -299,11 +299,12 @@ bool Checksum::validateChecksum(unsigned char *buffer, int type, int dataArea, b
     //printf("%stype=%i \n%s",KCYN,type, KWHT);
     printf("\nTOY = ");printf("%02X ",buffer[0x10]);printf("%02X \n",buffer[0x11]);
     
-    if (( type > 2 && type < 5 && buffer[0x11] == 0x00) && (buffer[0x10] == 0xDB || buffer[0x10] == 0xD2 )) { // type 4 est une evolution du type 3 sur les Traps
+    
+    if (( type > 2 && type < 5 && buffer[0x11] == 0x00) && ((buffer[0x10] >= 0xD2 && buffer[0x10] <= 0xDC) && buffer[0x11] == 0x00)) { // type 4 est une evolution du type 3 sur les Traps
         printf("%sTRAP DETECED, Using NEW type 3 CRC...%s\n",KCYN,KWHT);
-        if (!computeChecksum(type, ptr, &computedChecksum, true)) return false;
+        if (!computeChecksum(type, ptr, &computedChecksum, true)) return false; // NEW TYPE 3 for TRAPS
     } else {
-        if (!computeChecksum(type, ptr, &computedChecksum, false)) return false;
+        if (!computeChecksum(type, ptr, &computedChecksum, false)) return false; // STANDARD TYPE 3 with PADDING
     }
     
     

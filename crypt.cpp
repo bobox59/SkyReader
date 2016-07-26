@@ -118,7 +118,7 @@ void Crypt::EncryptTagBlock(unsigned char* blockData, unsigned int blockIndex, u
     {
         unsigned char cipherText[16];
         unsigned char aesKey[16];
-        printf("Encrypt Tag Block %02i : ", blockIndex);
+        printf("Encrypt Tag Block %02X : ", blockIndex);
         for(int compteur = 0; compteur <= 15; compteur++) {
             printf("%02X ",blockData[compteur]);
         }
@@ -135,11 +135,11 @@ void Crypt::EncryptTagBlock(unsigned char* blockData, unsigned int blockIndex, u
 
 void Crypt::DecryptTagBlock(unsigned char* blockData, unsigned int blockIndex, unsigned char const* tagBlocks0and1)
 {
-    if ( (ShouldEncryptBlock(blockIndex) != 0) && (blockIndex < 22 || blockIndex > 35) && (blockIndex < 49) )
+    if ( (ShouldEncryptBlock(blockIndex) != 0) )// && (blockIndex < 22 || blockIndex > 35) && (blockIndex < 49) )
     {
         unsigned char plainText[16];
         unsigned char aesKey[16];
-        printf("Decrypt Tag Block %02i : ", blockIndex);
+        printf("Decrypt Tag Block %02X : ", blockIndex);
         for(int compteur = 0; compteur <= 15; compteur++) {
             printf("%02X ",blockData[compteur]);
         }
@@ -153,7 +153,7 @@ void Crypt::DecryptTagBlock(unsigned char* blockData, unsigned int blockIndex, u
         printf("\n");
         
     } else {
-        printf("Decrypt Tag Block %02i : ", blockIndex);
+        printf("Decrypt Tag Block %02X : ", blockIndex);
         for(int compteur = 0; compteur <= 15; compteur++) {
             printf("%02X ",blockData[compteur]);
         }

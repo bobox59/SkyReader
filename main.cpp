@@ -297,8 +297,9 @@ int main(int argc, char* argv[])
             
             if (portalIn && upgrade) {
                 printf ("%sIt is not recommended to upgrade directly from the portal (write to a file first)\n",KRED);
-                usage();
-                exit(0);
+                sleep(1);
+                //usage();
+                //exit(0);
             }
             
             if (portalIn && portalOut) {
